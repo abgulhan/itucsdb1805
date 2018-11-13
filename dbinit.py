@@ -90,7 +90,7 @@ INIT_STATEMENTS = [
         PRIMARY KEY (flight_id,worker_id)
         );"""
         """INSERT INTO COUNTRIES (country_name)
-        VALUES Turkey """
+        VALUES (Turkey) """
          
         """
 ]
