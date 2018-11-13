@@ -89,7 +89,10 @@ INIT_STATEMENTS = [
         FOREIGN KEY (worker_id) REFERENCES AIRLINE_WORKERS(worker_id),
         PRIMARY KEY (flight_id,worker_id)
         );"""
-        
+        """INSERT INTO COUNTRIES (country_name)
+        VALUES Turkey """
+         
+        """
 ]
 
 
