@@ -34,7 +34,8 @@ def add_page():
         form_name = request.form["name"]
         
         try:
-            connection = dbapi2.connect(dsn)
+            url = os.getenv("DATABASE_URL")
+            connection = dbapi2.connect(url)
             cursor = connection.cursor()
             if (form_name):
                 cursor.execute(statement, {'name': country_name})
@@ -50,7 +51,8 @@ def countries_page():
         FROM COUNTRIES)"""
     data = ""
     try:
-        connection = dbapi2.connect(dsn)
+        url = os.getenv("DATABASE_URL")
+        connection = dbapi2.connect(url)
         cursor = connection.cursor()
         cursor.execute(statement)
         data = curser.fetchall()
